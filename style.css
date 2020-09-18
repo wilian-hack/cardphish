@@ -1,0 +1,418 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("claro.png");
+	background-repeat: no-repeat;
+	background-size: 4000px;
+	animation: movimiento 30s infinite linear alternate;
+}
+
+@keyframes movimiento {
+        from{
+                background-position: bottom left;
+        }to{
+                background-position: top right;
+        }
+}
+
+body header .divcero .div0 h1 {
+	margin-top: 35px;
+	margin-left: 170px;
+	font-size: 40px;
+}
+
+body header .divcero p {
+	text-align: center;
+	font-size: 40px;
+}
+
+body header .divcero {
+	background-color: #9f9f9f;
+	height: 170px;
+}
+body header .div0 img {
+	margin-left: 20px;
+	margin-top: 35px;
+	width: 100px;
+	height: 100px;
+}
+
+body:before {
+        content: "";
+        width: 100%;
+	height: 2600px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(#748eff, #ffffff);
+        opacity: 0.7;
+        z-index: -1;
+}
+
+body header .divcero .div0 {
+	background: #9f9f9f;
+	height: 100px;
+	display: flex;
+}
+
+body header img {
+	margin-top: 100px;
+	width: 600px;
+	height: 700px;
+	margin-left: 180px;
+}
+
+body header .div2 {                                                     
+	position: absolute;
+        background-color: #ffd946;
+	border-radius: 50%;
+        width: 200px;
+	height: 200px;
+        margin-left: 500px;
+        margin-top: 360px;
+	z-index: 2;
+}
+
+body header .paga {
+	position: absolute;
+	margin-top: 300px;
+	margin-left: 165px;
+	font-size: 80px;
+	background-color: #748eff;
+	color: white;
+	z-index: 3;
+}
+
+body header div .precio {
+	font-family: sans-serif;
+	margin-top: 50px;
+	color: black;
+	margin-left: 40px;
+}
+
+body header div .valor {
+	margin-top: 10px;
+	margin-left: 20px;
+	font-family: sans-serif;
+	font-size: 50px;
+	position: absolute;
+	color: black;
+}
+
+.span0 {
+	text-decoration: blink;
+	color: red;
+	font-weight: bold;
+}
+body section .input1 {
+	border-radius: 10px;
+	width: 600px;
+	height: 80px;
+	font-size: 35px;
+	border: 3px solid #748eff;
+	margin-top: 7px;
+	margin-left: 8px;
+	padding: 0 15px;
+	outline: none;
+}
+
+body section .input1:hover{
+	box-shadow: 0 5px 7px #748eff,
+			5px 0 7px #748eff,
+			-5px 0 7px #748eff,
+			0 -5px 7px #748eff;
+		}
+body section .input2 {
+        width: 160px;
+	height: 80px;
+        font-size: 35px;
+	border: 3px solid #748eff;
+	border-radius: 10px;
+	margin-top: 7px;
+	margin-left: 10px;
+	padding: 0 15px;
+}
+
+body section .input2:hover{
+        box-shadow: 0 5px 7px #748eff,
+                        5px 0 7px #748eff,
+			-5px 0 7px #748eff,
+                        0 -5px 7px #748eff;
+		}
+
+body section .input3 {
+	margin-left: 15px;
+	margin-top: 7px;
+	width: 137px;
+        height: 80px;
+	font-size: 35px;
+	border: 3px solid #748eff;
+	border-radius: 10px;
+	padding: 0 15px;
+}
+
+body section .input3:hover{
+        box-shadow: 0 5px 7px #748eff,
+			5px 0 7px #748eff,
+			-5px 0 7px #748eff,
+			0 -5px 7px #748eff;
+                }
+
+body section .input4 {
+        width: 265px;             
+	height: 80px;
+        font-size: 30px;
+	border: 3px solid #748eff;
+        border-radius: 10px;
+	padding: 0 15px;
+	margin-top: 7px;
+}
+
+body section .input4:hover{
+        box-shadow: 0 5px 7px #748eff,
+                        5px 0 7px #748eff,
+			-5px 0 7px #748eff,
+                        0 -5px 7px #748eff;
+                }
+body section .input5 {
+        width: 265px;
+	height: 80px;
+        font-size: 30px;
+	border: 3px solid #748eff;
+        border-radius: 10px;
+	padding: 0 15px;
+	margin-top: 7px;
+}
+
+body section .input5:hover{
+        box-shadow: 0 5px 7px #748eff,
+                        5px 0 7px #748eff,
+			-5px 0 7px #748eff,
+                        0 -5px 7px #748eff;
+		}
+
+body section .input6 {
+	border-radius: 10px;
+	width: 600px;
+	height: 80px;
+        font-size: 35px;
+        border: 3px solid #748eff;
+        margin-top: 7px;
+	margin-left: 8px;
+        padding: 0 15px;
+}
+
+body section .input6:hover{
+        box-shadow: 0 5px 7px #748eff,
+			5px 0 7px #748eff,
+			-5px 0 7px #748eff,
+			0 -5px 7px #748eff;
+		}
+
+body section .envio {
+	margin-left: 80px;
+        margin-top: 80px;
+        width: 700px;
+        height: 100px;
+        font-size: 65px;
+        border: 3px solid #748eff;
+	background-color: #748eff;
+	color: white;
+}
+
+body section .envio:hover{
+        box-shadow: 0 8px 7px #748eff,
+                        8px 0 7px #748eff,
+			-8px 0 7px #748eff,
+                        0 -8px 7px #748eff;
+	transition: 0.5s;
+                }
+body header .div3 {
+	height: 150px;
+	background: #ffffff;
+	width: 800px;
+	display: flex;
+	border: 5px solid #648eff;
+	margin-left: 70px;
+	margin-top: 50px;
+	border-radius: 10px;
+	box-shadow: 0 2px 7px gray,
+			2px 0 7px gray,
+			0 -2px 7px gray,
+			-2px 0 7px gray;
+}
+
+body header .div3 img {
+	width: 170px;
+	height: 100px;
+	margin-left: 20px;
+	margin-top: 25px;
+}
+
+body header .div3 p {
+	margin-top: 30px;
+	margin-left: 50px;
+	font-size: 35px;
+}
+
+body section {
+	box-shadow: 0 8px 10px gray,
+			8px 0 10px gray,
+			-8px 0 10px gray,
+			0 -8px 10px gray;
+	width: 850px;
+	margin-left: 60px;
+	height: 1200px;
+	margin-top: 150px;
+	margin-bottom: 50px;
+}
+
+body section .div {
+	background-color: #748eff;
+	height: 150px;
+}
+
+body section .div p {
+	color: white;
+	font-family: sans-serif;
+	font-size: 47px;
+	padding: 40px;
+	margin-left: 200px;
+}
+
+
+
+body section .inputuno {
+	margin-top: 40px;
+	background-color: #ffffff;
+	display: flex;
+	border-radius: 15px;
+	width: 87%;
+	height: 100px;
+	margin-left: 50px;
+}
+
+body section .inputuno img {
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+	margin-top: 9px;
+}
+
+body section .inputtres {
+	background: red;
+	display: flex;
+	border-radius: 15px;
+	height: 100px;
+	background-color: #ffffff;
+	width: 340px;
+	margin-left: 100px;
+	margin-top: 5px;
+}
+
+body section  .inputtres img {
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+body section .capados {
+	display: flex;
+	background-color: none;
+	height: 110px;
+	width: 87%;
+	margin-top: 50px;
+	margin-left: 40px;
+	border-radius: 10px;
+}
+
+body section .inputdos img {
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+        margin-top: 9px;
+}
+
+body section .inputdos {
+	margin-top: 5px;
+	width: 340px;
+        height: 100px;
+        background: #ffffff;
+	display: flex;
+	border-radius: 15px;
+	margin-left: 20px;
+}
+
+body section .capatres {
+	background-color: none;
+	display: flex;
+	margin-top: 50px;
+	border-radius: 10px;
+	height: 110px;
+}
+
+body section .inputcuatro {
+	margin-top: 5px;
+        width: 400px;
+        height: 100px;
+        background: #ffffff;
+	display: flex;
+	border-radius: 15px;     
+	margin-left: 20px;
+}
+
+
+body section .inputcuatro img {
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+        margin-top: 9px;
+}
+
+body section .inputcinco {
+	margin-top: 5px;
+        width: 400px;
+	height: 100px;
+        background: #ffffff;
+	display: flex;
+        border-radius: 15px;
+	margin-left: 10px;
+}
+
+body section .inputcinco img {
+	width: 80px;
+        height: 80px;
+        margin-left: 10px;
+        margin-top: 9px;
+}
+
+body section .inputseis {
+	margin-top: 40px;
+        background-color: #ffffff;
+        display: flex;
+        border-radius: 15px;
+	width: 87%;
+	height: 100px;
+	margin-left: 50px;
+}
+
+body section .inputseis img {
+        width: 80px;
+        height: 80px;
+        margin-left: 10px;
+        margin-top: 9px;
+}
+
+body section .imgs {
+	display: flex;
+}
+
+body section .imgs img{
+	width: 200px;
+	height: 150px;
+	margin-top: 30px;
+	margin-left: 150px;
+}

